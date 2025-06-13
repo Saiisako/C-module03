@@ -6,22 +6,26 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 12:27:23 by skock             #+#    #+#             */
-/*   Updated: 2025/06/13 18:28:00 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/13 18:53:35 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
-#include <vector>
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	ScavTrap	scav("Roboto");
 	ClapTrap	clap("CL4PTP");
+	ScavTrap	scav("Roboto");
+	FragTrap	frag("Bomberman");
 
 	clap.status();
+	
 	scav.status();
-	std::cout << std::endl;
 	scav.attack("Le beauJack");
 	scav.guardGate();
+	
+	frag.status();
+	frag.highFivesGuys();
 }

@@ -6,7 +6,7 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 16:48:47 by skock             #+#    #+#             */
-/*   Updated: 2025/06/13 18:28:27 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/13 18:45:06 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 ScavTrap::ScavTrap() : ClapTrap("ScavTrap", 100, 50, 20)
 {
-	std::cout << "Constructing scavtrap" << std::endl;
+	std::cout << "Constructing ScavTrap" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name, 100, 50, 20)
 {
-	std::cout << "Constructing scavtrap" << std::endl;
+	std::cout << "Constructing ScavTrap" << std::endl;
 	
 }
 

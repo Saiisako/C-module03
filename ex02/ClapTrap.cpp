@@ -6,7 +6,7 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 12:36:21 by skock             #+#    #+#             */
-/*   Updated: 2025/06/13 17:37:13 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/13 18:52:42 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ClapTrap::ClapTrap(const std::string &name, int hp, int ep, int ad) : name(name)
 
 ClapTrap::ClapTrap(std::string new_name)
 {
-	std::cout << "Constructor called." << std::endl;
+	std::cout << "Constructing claptrap" << std::endl;
 	name = new_name;
 	hit_points = 10;
 	energy_points = 10;
