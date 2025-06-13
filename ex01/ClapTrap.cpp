@@ -6,11 +6,43 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 12:36:21 by skock             #+#    #+#             */
-/*   Updated: 2025/06/12 14:17:05 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/13 16:46:02 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+
+ClapTrap::ClapTrap() : name("ClapTrap"), hit_points(10), energy_points(10), attack_damage(0) {}
+
+ClapTrap::ClapTrap(std::string new_name)
+{
+	std::cout << "Constructor called." << std::endl;
+	name = new_name;
+	hit_points = 10;
+	energy_points = 10;
+	attack_damage = 0;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+	*this = copy;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+	if (this != &other)
+	{
+		this->name = other.name;
+		this->hit_points = other.hit_points;
+		this->energy_points = other.energy_points;
+		this->attack_damage = other.attack_damage;
+	}
+	return (*this);
+}
+
+ClapTrap::~ClapTrap() {std::cout << "Destructor called." << std::endl;}
+
 
 void ClapTrap::status(void)
 {
@@ -53,14 +85,3 @@ void ClapTrap::beRepaired(unsigned int amount)
 	this->hit_points += amount;
 	std::cout << this->name << " repaired itself from " << amount << " health point."<< std::endl;
 }
-
-ClapTrap::ClapTrap(std::string new_name)
-{
-	std::cout << "ClapTrap constructor called." << std::endl;
-	name = new_name;
-	hit_points = 10;
-	energy_points = 10;
-	attack_damage = 0;
-}
-ClapTrap::~ClapTrap() {std::cout << "ClapTrap destructor called." << std::endl;}
-

@@ -1,13 +1,12 @@
 NAME = a.out
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address -fno-omit-frame-pointer
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address,leak
 
 RM = rm -rf
 
-SRCS =	main.cpp \
-		ClapTrap.cpp \
-		ScavTrap.cpp
+SRCS =	main.cpp\
+		ClapTrap.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 
