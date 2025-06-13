@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 12:27:23 by skock             #+#    #+#             */
-/*   Updated: 2025/06/13 18:28:00 by skock            ###   ########.fr       */
+/*   Created: 2025/06/13 16:48:47 by skock             #+#    #+#             */
+/*   Updated: 2025/06/13 18:03:03 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include <vector>
 
-int	main(void)
+class ScavTrap : public ClapTrap
 {
-	ScavTrap	scav("Roboto");
-	ClapTrap	clap("CL4PTP");
+	public:
+		ScavTrap(); // Constructeur par défaut
+		ScavTrap(const std::string& name); // Constructeur
+		ScavTrap(const ScavTrap& copy); // Constructeur de copie
+		ScavTrap& operator=(const ScavTrap& other); // Opérateur d'affectation
+		~ScavTrap(); // Destructeur
+		void	guardGate();
+};
 
-	clap.status();
-	scav.status();
-	std::cout << std::endl;
-	scav.attack("Le beauJack");
-	scav.guardGate();
-}
